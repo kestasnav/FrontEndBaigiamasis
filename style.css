@@ -11,7 +11,8 @@ body {
 }
 
 #task {
-  padding-left: 20px;
+  padding: 20px;
+ 
   background-color: cornsilk;
   margin-top: 50px;
   border: 1px solid black;
@@ -27,6 +28,7 @@ p {
   padding-bottom: 10px;
 }
 #box {
+  padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: cornsilk;
@@ -83,6 +85,7 @@ button {
   right: 0px;
 }
 #colors {
+  padding: 20px;
   display: flex;
   justify-content: center;
   background-color: cornsilk;
