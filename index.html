@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baigiamoji Front End Uzduotis</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script
+      src="https://kit.fontawesome.com/dcbeebf121.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu-btn" onclick="toggleNav()">
+      <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <main>
+      <header>
+        <div class="menu-bar">
+          <ul class="menu-list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#task">Buttons</a>
+            </li>
+            <li>
+              <a href="#box">Boxes</a>
+            </li>
+            <li>
+              <a href="#colors">Table</a>
+            </li>
+            <li>
+              <a href="#form">Forms</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <section id="task">
+        <h3>UŽDUOTYS</h3>
+        <p>
+          1. Paspaudus ant mygtuko, puslapyje esantis div atsiranda/pranyksta
+        </p>
+        <p>
+          2. Turit vieną div, su aukščiu,pločiu ir spalva bei 4 mygtukus, su
+          kuriais galit valdyt sukurto div savybes: plotis, aukstis, centravimas
+          ir pozicija
+        </p>
+        <p>
+          3. Burgeris ir šoninis Meniu - paspaudus ant burgerio gražiai
+          išvažiuoja šoninis meniu.
+        </p>
+        <p>
+          4. Bent 4 div elementai, pradžioje visi juodos spalvos, paspaudus bent
+          ant vieno iš jų, yra pakeičiamos spalvos visiems. Spalvos generuojamos
+          random.
+        </p>
+        <p>
+          5. Formoje pildoma "vardas", "pavardė" ir "gimimo data". Duomneys
+          kaupiami lentelėje. Stulpeliai: Eil. Nr., Vardas, Pavardė, Amžius.
+        </p>
+
+        <p>
+          Visos užduotys turi būti stilizuotos, kad nebūtų sumaišytos. Kiekviena
+          turi turėti savo section, headingus ir pan.
+        </p>
+      </section>
+      <section id="box">
+        <div class="buttons">
+          <button onclick="displayBox()">On / Off</button>
+          <button onclick="width()">Width</button>
+          <button onclick="heigth()">Heigth</button>
+          <button onclick="center()">Center</button>
+          <button onclick="position()">Position</button>
+        </div>
+        <div class="box1">
+          <div class="styledbox"></div>
+        </div>
+      </section>
+
+      <section id="colors">
+        <div class="color box6" onclick="recolor(event), changeText()"></div>
+        <div class="color box2" onclick="recolor(event), changeText()"></div>
+        <div class="color box3" onclick="recolor(event), changeText()"></div>
+        <div class="color box4" onclick="recolor(event), changeText()"></div>
+        <div class="color box5" onclick="recolor(event), changeText()"></div>
+      </section>
+
+      <section id="form">
+        <div id="table">
+          <h1 id="text">Forma</h1>
+          <table id="tbl">
+            <thead id="thead" class="off">
+              <th>Eil. Nr</th>
+              <th>Vardas</th>
+              <th>Pavardė</th>
+              <th>Amžius</th>
+            </thead>
+            <tbody id="tbody">
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="formButtons">
+          <div class="inputs">
+            <input id="name" type="text" name="name" placeholder="Vardas">
+            <input id="lastname" type="text" name="lastname" placeholder="Pavarde">
+            <input id="age" type="number" name="age" placeholder="Gimimo data">
+          </div>
+        <div class="buttons">
+          <button id="addForm" onclick="addForm ()">Pateikti</button>
+          <button id="emptyForm">Isvalyti</button>
+        </div>
+      </div>
+      </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
