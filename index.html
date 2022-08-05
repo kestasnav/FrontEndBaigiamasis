@@ -10,18 +10,23 @@
       src="https://kit.fontawesome.com/dcbeebf121.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=BhuTuka+Expanded+One&family=Roboto+Mono:ital,wght@0,300;1,100;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="menu-btn" onclick="toggleNav()">
-      <i class="fas fa-bars fa-2x"></i>
-    </div>
+    
     <main>
       <header>
+      
+        <div class="menu-btn">
+          <i class="fas fa-bars m-5"></i>
+        </div> 
         <div class="menu-bar">
           <ul class="menu-list">
             <li>
-              <a href="index.html">Home</a>
+              <a href="#task">Home</a>
             </li>
             <li>
               <a href="#task">Buttons</a>
@@ -74,35 +79,26 @@
           <button onclick="heigth()">Heigth</button>
           <button onclick="center()">Center</button>
           <button onclick="position()">Position</button>
+          <button id="reset">Reset</button>
         </div>
         <div class="box1">
-          <div class="styledbox"></div>
+          <div class=""></div>
         </div>
       </section>
 
       <section id="colors">
-        <div class="color box6" onclick="recolor(event), changeText()"></div>
-        <div class="color box2" onclick="recolor(event), changeText()"></div>
-        <div class="color box3" onclick="recolor(event), changeText()"></div>
-        <div class="color box4" onclick="recolor(event), changeText()"></div>
-        <div class="color box5" onclick="recolor(event), changeText()"></div>
+        <div class="colorbox">
+          <div class="color box6" ondblclick="recolor(event)"></div>
+          <div class="color box2" ondblclick="recolor(event)"></div>
+          <div class="color box3" ondblclick="recolor(event)"></div>
+          <div class="color box4" ondblclick="recolor(event)"></div>
+          <div class="color box5" ondblclick="recolor(event)"></div>
+        </div>
+        <div><span>* Double click</span></div>
       </section>
 
       <section id="form">
-        <div id="table">
-          <h1 id="text">Forma</h1>
-          <table id="tbl">
-            <thead id="thead" class="off">
-              <th>Eil. Nr</th>
-              <th>Vardas</th>
-              <th>Pavardė</th>
-              <th>Amžius</th>
-            </thead>
-            <tbody id="tbody">
-              
-            </tbody>
-          </table>
-        </div>
+        <h1 id="text">Forma</h1>
         <div class="formButtons">
           <div class="inputs">
             <input id="name" type="text" name="name" placeholder="Vardas">
@@ -111,8 +107,22 @@
           </div>
         <div class="buttons">
           <button id="addForm" onclick="addForm ()">Pateikti</button>
-          <button id="emptyForm">Isvalyti</button>
+          <button id="emptyForm" onclick="resetCount ()">Isvalyti</button>
         </div>
+      </div>
+      <div id="table">
+        
+        <table id="tbl">
+          <thead id="thead" class="off">
+            <th>Eil. Nr</th>
+            <th>Vardas</th>
+            <th>Pavardė</th>
+            <th>Amžius</th>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
       </div>
       </section>
     </main>

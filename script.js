@@ -1,5 +1,18 @@
+
+// Burgerio junginejimas
+
+$(".menu-btn").click(function() {
+    $(".menu-bar").toggleClass("show");
+})
+
+$(".fas").click(function () {
+    $(".fas").toggleClass("fa-bars fa-times");
+});
+
+// Dezuciu klasiu junginejimas
+
 function displayBox () {
-    document.querySelector('.styledbox').classList.toggle('show');
+    document.querySelector('.box1').classList.toggle('show1');
     
 }
 
@@ -19,6 +32,19 @@ function position () {
     document.querySelector('.box1').classList.toggle('position');
 }
 
+
+$('#reset').click(function(){
+	$('.box1').removeClass('styledbox');
+    $('.box1').removeClass('show1');
+    $('.box1').removeClass('width');
+    $('.box1').removeClass('heigth');
+    $('.box1').removeClass('center');
+    $('.box1').removeClass('position'); 
+})
+
+
+// Spalvu keitinejimas
+
 const box6 = document.querySelector(".box6");
 const box2 = document.querySelector(".box2");
 const box3 = document.querySelector(".box3");
@@ -26,19 +52,16 @@ const box4 = document.querySelector(".box4");
 const box5 = document.querySelector(".box5");
 
 function recolor(event) {
-    box6.style.backgroundColor = randomColor();
-    box2.style.backgroundColor = randomColor();
-    box3.style.backgroundColor = randomColor();
-    box4.style.backgroundColor = randomColor();
-    box5.style.backgroundColor = randomColor();
-}
-
-function changeText() {
-    box6.innerHTML = randomColor();
-    box2.innerHTML = randomColor();
-    box3.innerHTML = randomColor();
-    box4.innerHTML = randomColor();
-    box5.innerHTML = randomColor();
+ const box7 = box6.style.backgroundColor = randomColor();
+ const box8 = box2.style.backgroundColor = randomColor();
+ const box9 = box3.style.backgroundColor = randomColor();
+ const box10 = box4.style.backgroundColor = randomColor();
+ const box11 = box5.style.backgroundColor = randomColor();
+    box6.innerHTML = box7;
+    box2.innerHTML = box8;
+    box3.innerHTML = box9;
+    box4.innerHTML = box10;
+    box5.innerHTML = box11;
 }
 
 function randomColor() {
@@ -49,13 +72,9 @@ function rand() {
     return Math.floor(Math.random() * 256);
 }
 
- $(".menu-btn").click(function() {
-    $(".menu-bar").toggleClass("show");
-})
+// Formos pridejimas ir uzpildymas
 
 function addForm () {
-    let element = document.getElementById("thead");
-    element.classList.remove("off");
     let tbody = document.getElementById("tbody");
     let tbodyTr = tbody.insertRow();
     let cell5 = tbodyTr.insertCell(0);
@@ -76,14 +95,21 @@ function addForm () {
   
   let i = 0;
   function addRowCount() {
-    addForm.value = i++;
+    i++;
     return i;
   }
-
+function resetCount () {
+    i = 0;
+}
 
 $("#emptyForm").click(function() {
     $("#tbody").empty();
-    $("#thead").css("display", "none");
+    $("#thead").hide();
 })
 
+$("#emptyForm").click(function() {
+    $("#name").val('');
+    $("#lastname").val('');
+    $("#age").val('');
+})
 

@@ -2,22 +2,86 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
-  background-color: #f4f4f4;
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+  background-repeat: no-repeat;
   max-width: 1200px;
   margin: 0 auto;
 }
+/* Burgerio meniu stiliai */
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+a:hover {
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 83px;
+  border-image-slice: 1;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+.icon-right {
+  display: none;
+}
+.menu-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 230px;
+  z-index: 99;
+}
+.fas{
+  font-size: 60px;
+}
+.menu-bar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f4f4f4;
+  height: 80px;
+  width: 101%;
+  border: black 1px solid;
+  opacity: 0.9;
+  padding-left: 130px;
+  transform: translateX(-2550px);
+  transition: transform 0.5s ease-in-out;
+  z-index: 98;
+}
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.menu-bar ul li {
+  padding: 10px;
+  font-size: 24px;
+}
+.menu-bar.show {
+  transform: translateX(-20px);
+}
+
+
+/* Uzduoties sekcijos stiliai */
 
 #task {
   padding: 20px;
- 
+
   background-color: cornsilk;
-  margin-top: 50px;
+  margin-top: 100px;
   border: 1px solid black;
   border-radius: 10px;
   margin-bottom: 50px;
+  box-shadow: 17px -16px 7px 0px rgba(0, 0, 0, 0.58);
 }
 
 h3 {
@@ -27,11 +91,15 @@ h3 {
 p {
   padding-bottom: 10px;
 }
-#box {
+
+/* Dezuciu klasiu sekcijos stiliai */
+
+ #box {
   padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: cornsilk;
+  box-shadow: 17px -16px 7px 0px rgba(0, 0, 0, 0.58);
   margin: 0 auto;
   position: relative;
 }
@@ -49,6 +117,11 @@ button {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+#reset {
+  background-color: grey;
+  color: white;
+}
 .styledbox {
   width: 100px;
   height: 100px;
@@ -56,7 +129,10 @@ button {
   display: none;
   justify-content: center;
 }
-.show {
+.show1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
   display: block;
 }
 
@@ -64,122 +140,57 @@ button {
   width: 200px;
   height: 100px;
   background-color: red;
-  display: block;
 }
 
 .heigth {
-  width: 200px;
+  width: 100px;
   height: 300px;
   background-color: red;
-  display: block;
 }
 
 .center {
+  width: 100px;
+  height: 100px;
   margin-left: 500px;
   background-color: red;
 }
 
 .position {
+  width: 100px;
+  height: 100px;
   position: absolute;
+  background-color: red;
   top: 400px;
   right: 0px;
-}
+} 
+
+/* Besikeicianciu spalvu sekcijos stiliai */
+
 #colors {
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: cornsilk;
+  box-shadow: 17px -16px 7px 0px rgba(0, 0, 0, 0.58);
   margin-top: 50px;
   border: 1px solid black;
   border-radius: 10px;
+}
+.colorbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .color {
   margin: 20px;
   background-color: black;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-}
-
-a,
-li {
-  text-decoration: none;
-  list-style: none;
-}
-
-.menu-btn {
   cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 230px;
-  z-index: 2;
 }
 
-.menu-bar {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #f4f4f4;
-  width: 50%;
-  border: black 1px solid;
-  opacity: 0.9;
-  padding: 30px;
-  transform: translateX(-2550px);
-  transition: transform 0.5s ease-in-out;
-  
-}
-.menu-list {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.menu-bar ul li {
-  padding: 10px;
-  border-bottom: #ccc solid 1px;
-  font-size: 24px;
-}
-.menu-bar.show {
-  transform: translateX(-20px);
-}
-
-#form {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: cornsilk;
-  align-items: center;
-  justify-content: center;
-}
-#text{
-  text-align: center;
- 
-}
-.table {
-  justify-content: center;
-  
-}
-#tbl {
-  margin-top: 30px;
-}
-.formButtons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#emptyForm{
-  margin-left: 50px;
- 
-}
-.inputs {
-  margin-top: 30px;
-margin-bottom: 30px;
-}
 .box2,
 .box3,
 .box4,
@@ -189,6 +200,48 @@ margin-bottom: 30px;
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+/* Formu sekcijos stiliai*/
+
+/* Imputai ir Buttonai */
+#form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: cornsilk;
+  box-shadow: 17px -16px 7px 0px rgba(0, 0, 0, 0.58);
+  align-items: center;
+  justify-content: center;
+}
+.formButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#emptyForm {
+  margin-left: 50px;
+}
+.inputs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Lenteles */
+
+#text {
+  margin-top: 20px;
+  text-align: center;
+}
+.table {
+  justify-content: center;
+}
+#tbl {
+  margin-top: 30px;
 }
 
 th,
