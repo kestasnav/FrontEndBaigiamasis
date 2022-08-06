@@ -7,7 +7,12 @@
 
 body {
   background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+main {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -34,7 +39,7 @@ a:hover {
   cursor: pointer;
   position: fixed;
   top: 15px;
-  right: 230px;
+  right: 30px;
   z-index: 99;
 }
 .fas{
@@ -48,13 +53,14 @@ a:hover {
   left: 0;
   background: #f4f4f4;
   height: 80px;
-  width: 101%;
+  width: 101%; 
   border: black 1px solid;
   opacity: 0.9;
   padding-left: 130px;
-  transform: translateX(-2550px);
+  transform: translateX(-10550px);
   transition: transform 0.5s ease-in-out;
   z-index: 98;
+  
 }
 .menu-list {
   display: flex;
@@ -74,7 +80,7 @@ a:hover {
 /* Uzduoties sekcijos stiliai */
 
 #task {
-  padding: 20px;
+  padding: 50px;
 
   background-color: cornsilk;
   margin-top: 100px;
@@ -86,10 +92,12 @@ a:hover {
 
 h3 {
   padding: 20px;
+  
 }
 
 p {
   padding-bottom: 10px;
+  line-height: 1.5rem;
 }
 
 /* Dezuciu klasiu sekcijos stiliai */
@@ -102,9 +110,15 @@ p {
   box-shadow: 17px -16px 7px 0px rgba(0, 0, 0, 0.58);
   margin: 0 auto;
   position: relative;
+  min-height: 290px;
 }
 .box1 {
   display: flex;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: green;
 }
 .buttons {
   display: flex;
@@ -130,36 +144,37 @@ button {
   justify-content: center;
 }
 .show1 {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: block;
+  display: inline-block;
 }
 
 .width {
   width: 200px;
-  height: 100px;
+  
   background-color: red;
 }
 
 .heigth {
-  width: 100px;
+  
   height: 300px;
   background-color: red;
 }
 
+.centerparentdiv {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+
 .center {
-  width: 100px;
-  height: 100px;
-  margin-left: 500px;
-  background-color: red;
+  align-items: center;
+ justify-content: center;
+
 }
 
 .position {
-  width: 100px;
-  height: 100px;
   position: absolute;
-  background-color: red;
+ 
   top: 400px;
   right: 0px;
 } 
@@ -231,6 +246,16 @@ button {
   margin-bottom: 30px;
 }
 
+input{
+  width: 250px;
+  height: 40px;
+  padding: 0 20px;
+}
+input,
+input::placeholder {
+    font-size: 20px;
+}
+
 /* Lenteles */
 
 #text {
@@ -246,14 +271,19 @@ button {
 
 th,
 td {
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 250px;
+  height: 30px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 #tbl {
   width: 450px;
 }
 tr:nth-child(even) {
-  background-color: grey;
+  background-color: lightgrey;
 }
 
 .off {

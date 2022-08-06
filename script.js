@@ -17,39 +17,47 @@ function displayBox () {
 }
 
 function width () {
+    document.querySelector('.box1').classList.add('show1');
     document.querySelector('.box1').classList.toggle('width');
 }
 
 function heigth () {
+    document.querySelector('.box1').classList.add('show1');
     document.querySelector('.box1').classList.toggle('heigth');
 }
 
 function center () {
+    document.querySelector('.box1').classList.add('show1');
+    document.querySelector('.centerparent').classList.toggle('centerparentdiv');
     document.querySelector('.box1').classList.toggle('center');
 }
 
 function position () {
+    document.querySelector('.box1').classList.add('show1');
     document.querySelector('.box1').classList.toggle('position');
 }
 
 
 $('#reset').click(function(){
-	$('.box1').removeClass('styledbox');
+	
     $('.box1').removeClass('show1');
     $('.box1').removeClass('width');
     $('.box1').removeClass('heigth');
-    $('.box1').removeClass('center');
+    $('.centerparent').removeClass('center');
     $('.box1').removeClass('position'); 
+    $('.box1').removeClass('center'); 
+    $('.centerparent').removeClass('centerparentdiv'); 
 })
 
 
 // Spalvu keitinejimas
 
-const box6 = document.querySelector(".box6");
+
 const box2 = document.querySelector(".box2");
 const box3 = document.querySelector(".box3");
 const box4 = document.querySelector(".box4");
 const box5 = document.querySelector(".box5");
+const box6 = document.querySelector(".box6");
 
 function recolor(event) {
  const box7 = box6.style.backgroundColor = randomColor();
