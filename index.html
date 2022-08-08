@@ -10,35 +10,36 @@
       src="https://kit.fontawesome.com/dcbeebf121.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=BhuTuka+Expanded+One&family=Roboto+Mono:ital,wght@0,300;1,100;1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=BhuTuka+Expanded+One&family=Roboto+Mono:ital,wght@0,300;1,100;1,200&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
     <main>
-      <header>
-      
+      <header id="header">
         <div class="menu-btn">
           <i class="fas fa-bars m-5"></i>
-        </div> 
+        </div>
         <div class="menu-bar">
           <ul class="menu-list">
             <li>
-              <a href="#task">Home</a>
+              <a href="#header">Home</a>
             </li>
             <li>
-              <a href="#task">Buttons</a>
+              <a href="#task">Task</a>
             </li>
             <li>
               <a href="#box">Boxes</a>
             </li>
             <li>
-              <a href="#colors">Table</a>
+              <a href="#colors">Colors</a>
             </li>
             <li>
-              <a href="#form">Forms</a>
+              <a href="#form">Form</a>
             </li>
           </ul>
         </div>
@@ -102,30 +103,37 @@
       <section id="form">
         <h1>Forma</h1>
         <div class="formButtons">
-          <div class="inputs">
-            <input id="name" type="text" name="name" placeholder="Vardas">
-            <input id="lastname" type="text" name="lastname" placeholder="Pavardė">
-            <input id="age" type="number" name="age" placeholder="Gimimo data">
+          <form class="inputs">
+            <input id="name" type="text" name="name" placeholder="Vardas" />
+            <input
+              id="lastname"
+              type="text"
+              name="lastname"
+              placeholder="Pavardė"
+            />
+            <input
+              id="age"
+              type="number"
+              name="age"
+              placeholder="Gimimo data"
+            />
+          </form>
+          <div class="buttons">
+            <button id="addForm" onclick="addForm ()">Pateikti</button>
+            <button id="emptyForm" onclick="resetCount ()">Išvalyti</button>
           </div>
-        <div class="buttons">
-          <button id="addForm" onclick="addForm ()">Pateikti</button>
-          <button id="emptyForm" onclick="resetCount ()">Išvalyti</button>
         </div>
-      </div>
-      <div id="table">
-        
-        <table id="tbl">
-          <thead id="thead" class="off">
-            <th>Eil. Nr</th>
-            <th>Vardas</th>
-            <th>Pavardė</th>
-            <th>Amžius</th>
-          </thead>
-          <tbody id="tbody">
-            
-          </tbody>
-        </table>
-      </div>
+        <div id="table">
+          <table id="tbl">
+            <thead id="thead" class="off">
+              <th>Eil. Nr</th>
+              <th>Vardas</th>
+              <th>Pavardė</th>
+              <th>Amžius</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
       </section>
     </main>
 
